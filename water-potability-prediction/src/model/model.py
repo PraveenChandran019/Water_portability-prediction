@@ -24,8 +24,8 @@ def model_building(n_estimators,x_train,y_train):
     return clf
 
 def save_model(clf):
-    model_file = pickle.dump(clf,open("model.pkl","wb"))
-    return model_file
+    model = pickle.dump(clf,open("models/model.pkl","wb"))
+    return model
 
 def main():
     data = load_data("./data/processed/train_processed.csv")

@@ -15,7 +15,7 @@ def  data_tranform(test_data):
     return x_test,y_test
 
 def model_predict(x_test):
-    model = pickle.load(open("model.pkl","rb"))
+    model = pickle.load(open("models/model.pkl","rb"))
     y_pred = model.predict(x_test)
     return y_pred
 
@@ -33,7 +33,7 @@ def metrics(y_test,y_pred):
     return metrics_dict
 
 def save_metrics(metrics_dict):
-    with open("metrics.json","w") as file:
+    with open("reports/metrics.json","w") as file:
         metrics_file = json.dump(metrics_dict,file,indent = 4)
     return metrics_file
 
@@ -43,6 +43,7 @@ def main():
     y_pred = model_predict(x_test)
     metrics_dict = metrics(y_test,y_pred)
     metrics_save = save_metrics(metrics_dict)
+    return metrics_save
     
 if __name__ == "__main__" :
     main()
