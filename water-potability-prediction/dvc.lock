@@ -5,11 +5,29 @@ stages:
     deps:
     - path: src/data/data_collection.py
       hash: md5
-      md5: 1280e8a9f59ffdeafe147bcefdcf856e
-      size: 1909
+      md5: 45ec794aabf7d6fb243faa956bb3bef7
+      size: 1911
     outs:
     - path: data/raw
       hash: md5
       md5: 97825bb768b4b66d70c59daed663063a.dir
       size: 522262
+      nfiles: 2
+  prep_processing:
+    cmd: python src/data/data_prep.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 97825bb768b4b66d70c59daed663063a.dir
+      size: 522262
+      nfiles: 2
+    - path: src/data/data_prep.py
+      hash: md5
+      md5: 333eedb48306a1ab9e688c26e0fa2fb5
+      size: 1033
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: a92b8581128eb8dd5d16a84af7ae83c1.dir
+      size: 546215
       nfiles: 2

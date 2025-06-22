@@ -6,7 +6,6 @@ stages:
     outs:
     - data/raw
 
-
   prep_processing:
     cmd: python src/data/data_prep.py
     deps:
@@ -14,3 +13,10 @@ stages:
     - src/data/data_prep.py
     outs:
     - data/processed
+  model_buliding:
+    cmd: python src/model/model.py
+    deps:
+    - data/processed
+    - src/model/model.py
+    outs:
+    - models/model.pkl

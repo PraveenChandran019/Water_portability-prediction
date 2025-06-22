@@ -31,8 +31,8 @@ def main():
     data = load_data("./data/processed/train_processed.csv")
     params = load_paramas("params.yaml")
     x_train, y_train = data_transform(data)
-    model = model_building(params,x_train, y_train)
-    model_saved = save_model(model)
+    model_bulid = model_building(params,x_train, y_train)
+    model = save_model(model_bulid)
     
 if __name__ == "__main__":
     main()
