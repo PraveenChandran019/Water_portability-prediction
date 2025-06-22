@@ -32,7 +32,8 @@ def main():
     params = load_paramas("params.yaml")
     x_train, y_train = data_transform(data)
     model_bulid = model_building(params,x_train, y_train)
-    model = save_model(model_bulid)
+    save_model(model_bulid)
+    
     
 if __name__ == "__main__":
     main()
