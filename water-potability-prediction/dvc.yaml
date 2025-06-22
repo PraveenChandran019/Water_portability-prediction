@@ -2,6 +2,15 @@ stages:
   data_collection:
     cmd: python src/data/data_collection.py
     deps:
-    - src/data_collection.py
+    - src/data/data_collection.py
     outs:
     - data/raw
+
+
+  prep_processing:
+    cmd: python src/data/data_prep.py
+    deps:
+    - data/raw
+    - src/data/data_prep.py
+    outs:
+    - data/processed
