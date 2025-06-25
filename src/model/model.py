@@ -28,7 +28,7 @@ def save_model(clf):
     return model
 
 def main():
-    data = load_data("./data/processed/train_processed_mean.csv")
+    data = load_data("./data/processed/train_processed.csv")
     params = load_paramas("params.yaml")
     x_train, y_train = data_transform(data)
     model_bulid = model_building(params,x_train, y_train)

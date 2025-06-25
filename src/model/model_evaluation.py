@@ -38,7 +38,7 @@ def save_metrics(metrics_dict):
     return metrics_file
 
 def main():
-    data = load_data("./data/processed/test_processed_mean.csv")
+    data = load_data("./data/processed/test_processed.csv")
     x_test,y_test = data_tranform(data)
     y_pred = model_predict(x_test)
     metrics_dict = metrics(y_test,y_pred)
