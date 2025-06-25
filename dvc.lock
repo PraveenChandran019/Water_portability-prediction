@@ -26,13 +26,13 @@ stages:
       nfiles: 2
     - path: src/data/data_prep.py
       hash: md5
-      md5: 333eedb48306a1ab9e688c26e0fa2fb5
-      size: 1033
+      md5: 075dc731e26daeae2075ec87b50f7848
+      size: 1031
     outs:
     - path: data/processed
       hash: md5
-      md5: 09d7d1468d5c1e6739769af7e3154438.dir
-      size: 546137
+      md5: 0beb4adc62d83817b414bed6f535f487.dir
+      size: 546895
       nfiles: 2
   model_buliding:
     cmd: python src/model/model.py
